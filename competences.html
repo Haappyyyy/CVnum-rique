@@ -2,25 +2,91 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CV Arthur Delobel - Compétences</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    </noscript>
+    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/main.css?ver=1.2.1" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+    <style>
+        .competences {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .competence {
+            position: relative;
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+        }
+        .competence img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .competence:hover img {
+            transform: scale(1.1);
+        }
+        .competence .description {
+            display: none;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .competence:hover .description {
+            display: block;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="competences.html">Compétences</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-light" id="top">
+    <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix">
+          <h1 class="site-title mb-0">Arthur Delobel</h1>
+          <div class="site-nav"> 
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="formations.html">Formations</a></li>
+                <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
+                <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
-    
-    <div class="container">
-        <h2>Compétences</h2>
+
+    <div class="shadow-1-strong bg-white my-5 p-5" id="competences">
+        <h2 class="h2 fw-light text mb-4">Compétences</h2>
         <div class="competences">
             <div class="competence">
                 <img src="images/reseau.png" alt="Administration réseau">
@@ -56,9 +122,9 @@
             </div>
         </div>
     </div>
-    
-    <footer>
-        <p>&copy; 2025 Arthur Delobel. Tous droits réservés.</p>
-    </footer>
+
+    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
+    <script src="scripts/aos.js?ver=1.2.1"></script>
+    <script src="scripts/main.js?ver=1.2.1"></script>
 </body>
 </html>
